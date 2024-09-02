@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "nome":"cassio",
+        "email": "cassio_souza@live.com",
+        "password":"1234"
+    },
+    {
+        "id":2,
+        "nome":"roberto",
+        "email": "roberto_souza@live.com",
+        "password":"123456"
+    },
+    {
+        "id":3,
+        "nome":"ruan",
+        "email": "ruan_souza@live.com",
+        "password":"123"
+    },
+    {
+        "id":4,
+        "nome":"leonardo",
+        "email": "leonardo_souza@live.com",
+        "password":"1234567"
+    }
+]
