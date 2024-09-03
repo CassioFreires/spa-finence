@@ -10,7 +10,7 @@ function AddCategoriesModal({handleShow, handleClose, show}) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Registre sua categoria!</Modal.Title>
         </Modal.Header>
           <TransactionForm/>
         <Modal.Footer>

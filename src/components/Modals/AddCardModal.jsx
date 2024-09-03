@@ -11,7 +11,7 @@ function AddCardModal({handleShow, handleClose, show}) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Registre seu cartão</Modal.Title>
         </Modal.Header>
           <CardForm />
         <Modal.Footer>

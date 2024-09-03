@@ -23,11 +23,12 @@ const Cartoes = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Nome do titular</th>
             <th>Número</th>
-            <th>Nome do Titular</th>
-            <th>Tipo</th>
-            <th>Ações</th>
+            <th>valor</th>
+            <th>bandeira</th>
+            <th>data de validade</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody>

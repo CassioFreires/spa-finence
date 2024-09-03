@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Container, Form, Button } from 'react-bootstrap';
+import dataFlag from '../../flag.mok.json'
+console.log(dataFlag)
 
 const FormContainer = styled(Container)`
   max-width: 500px;
@@ -24,43 +26,69 @@ const CardForm = ({ tipo }) => {
 
   return (
     <FormContainer>
-      <Form.Select aria-label="Default select example">
+      <Form.Label>Crédito/Débito: </Form.Label>
+      <Form.Select aria-label="Default select example" className='mb-3'>
         <option>Selecione o tipo do cartão</option>
         {
           tipoCartao.map((cartao, index) => {
-            return <option value="1" key={index}>{cartao}</option>
+            return <option value={cartao} key={index}>{cartao}</option>
           })
         }
       </Form.Select>
+
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formNumero">
-          <Form.Label>Número do Cartão</Form.Label>
+        <Form.Group controlId="formNomeTitular">
+          <Form.Label>Nome do Titular:</Form.Label>
           <Form.Control
             type="text"
-            name="numero"
-            onChange={handleChange}
-            placeholder="Digite o número do cartão"
+            name="name_card"
+            placeholder="Digite o nome do titular"
             required
+            className='mb-3'
           />
         </Form.Group>
 
-        <Form.Group controlId="formNomeTitular">
-          <Form.Label>Nome do Titular</Form.Label>
+        <Form.Group controlId="formNumeroCartao">
+          <Form.Label>Número do Cartão:</Form.Label>
           <Form.Control
             type="text"
-            name="nomeTitular"
-            onChange={handleChange}
-            placeholder="Digite o nome do titular"
+            name="number_card"
+            placeholder="Digite o número do cartão"
             required
+            className='mb-3'
           />
         </Form.Group>
+
+
+        <Form.Group controlId="formValor">
+          <Form.Label>Valor do cartão:</Form.Label>
+          <Form.Control
+            type="text"
+            name="value_card"
+            placeholder="Digite o saldo ou limite do cartão"
+            required
+            className='mb-3'
+          />
+        </Form.Group>
+
+      <Form.Label>Bandeira:</Form.Label>
+      <Form.Select aria-label="Default select example" className='mb-3'>
+        <option>Selecione a bandeira do cartão</option>
+        {
+          dataFlag.map((item) => {
+            return (
+              <option value={item.flag} key={item.id}>{item.flag}</option>
+            )
+          })
+        }
+      </Form.Select>
+
 
         <Form.Group controlId="formValidade">
           <Form.Label>Data de Validade</Form.Label>
           <Form.Control
             type="text"
             name="validade"
-            onChange={handleChange}
             placeholder="MM/AA"
             required
           />

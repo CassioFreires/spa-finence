@@ -23,12 +23,12 @@ const Transacoes = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Cartão de transação</th>
             <th>Tipo</th>
             <th>Valor</th>
             <th>Data</th>
             <th>Descrição</th>
-            <th>Ações</th>
+            <th>Ação</th>
           </tr>
         </thead>
         <tbody>

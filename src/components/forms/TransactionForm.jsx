@@ -31,17 +31,17 @@ const TransactionForm = () => {
   return (
     <FormContainer>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formTipo">
-          <Form.Label>Tipo de Transação</Form.Label>
+        <Form.Group controlId="formTipo" className='mb-3'>
+          <Form.Label>Qual cartão será feita a transação?</Form.Label>
           <Form.Control as="select" name="tipo" value={transacao.tipo} onChange={handleChange} required>
-            <option value="">Selecione...</option>
-            <option value="Débito">Débito</option>
-            <option value="Crédito">Crédito</option>
+            <option value="">Selecione</option>
+            <option value="debito">Débito - Final 3425</option>
+            <option value="credito">Crédito - Final 2345</option>
           </Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="formValor">
-          <Form.Label>Valor</Form.Label>
+        <Form.Group controlId="formValor" className='mb-3'>
+          <Form.Label>Valor da transação:</Form.Label>
           <Form.Control
             type="number"
             name="valor"
@@ -52,7 +52,14 @@ const TransactionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group controlId="formData">
+        <Form.Label>Tipo de transação:</Form.Label>
+        <Form.Select aria-label="Default select example" className='mb-3'>
+        <option>Selecione</option>
+        <option value='expense'>Despesa</option>
+        <option value='income'>Renda</option>
+      </Form.Select>
+
+        <Form.Group controlId="formData" className='mb-3'>
           <Form.Label>Data</Form.Label>
           <Form.Control
             type="date"
@@ -63,7 +70,7 @@ const TransactionForm = () => {
           />
         </Form.Group>
 
-        <Form.Group controlId="formDescricao">
+        <Form.Group controlId="formDescricao" className='mb-3'>
           <Form.Label>Descrição</Form.Label>
           <Form.Control
             type="text"
